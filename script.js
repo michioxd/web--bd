@@ -15,12 +15,16 @@ $(document).ready(function() {
                 (i < data.length); i++) {
                 var item = dataa[i],
                     ipfs = "",
-                    drive = "";
+                    drive = "",
+                    magnet = "";
                 if (item['ipfsUrl'] !== "") {
-                    ipfs = `<button onclick="window.open('` + item['ipfsUrl'] + `')" class="mdui-btn mdui-ripple">IPFS</button> `
+                    ipfs = `<a href="` + item['ipfsUrl'] + `" target="_blank" class="mdui-btn mdui-ripple">IPFS</a> `
                 }
                 if (item['driveUrl'] !== "") {
-                    drive = ` <button onclick="window.open('` + item['driveUrl'] + `')" class="mdui-btn mdui-ripple">DRIVE</button>`
+                    drive = ` <a href="` + item['driveUrl'] + `" target="_blank" class="mdui-btn mdui-ripple">DRIVE</a>`
+                }
+                if (item['driveUrl'] !== "") {
+                    drive = ` <a href="` + item['magnet'] + `" class="mdui-btn mdui-ripple">TORRENT</a>`
                 }
                 output = `
             <div class="mdui-col-xs-6 mdui-col-sm-3" >
@@ -36,7 +40,7 @@ $(document).ready(function() {
                         <div class="mdui-card-primary-subtitle">` + item['type'] + `</div>
                     </div>
                     <div class="mdui-card-actions">
-                        ` + ipfs + drive + `
+                        ` + ipfs + drive + magnet + `
                     </div>
                 </div>
                 </div>
