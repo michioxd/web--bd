@@ -1,0 +1,25 @@
+.art {
+    width: 100%;
+    padding-bottom: 130%;
+    position: relative;
+}
+
+.art .inner {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    position: fixed;
+    z-index: 99;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.itemss {
+    margin-bottom: .6rem;
+}
