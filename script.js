@@ -18,13 +18,13 @@ $(document).ready(function() {
                     drive = "",
                     magnet = "";
                 if (item['ipfsUrl'] !== "") {
-                    ipfs = `<a href="` + item['ipfsUrl'] + `" target="_blank" class="mdui-btn mdui-ripple">IPFS</a> `
+                    ipfs = `<a href="` + item['ipfsUrl'] + `" target="_blank" class="mdui-btn mdui-ripple">IPFS</a> `;
                 }
                 if (item['driveUrl'] !== "") {
-                    drive = ` <a href="` + item['driveUrl'] + `" target="_blank" class="mdui-btn mdui-ripple">DRIVE</a>`
+                    drive = ` <a href="` + item['driveUrl'] + `" target="_blank" class="mdui-btn mdui-ripple">DRIVE</a>`;
                 }
                 if (item['driveUrl'] !== "") {
-                    drive = ` <a href="` + item['magnet'] + `" class="mdui-btn mdui-ripple">TORRENT</a>`
+                    magnet = ` <a href="` + item['magnet'] + `" class="mdui-btn mdui-ripple">TORRENT</a>`;
                 }
                 output = `
             <div class="mdui-col-xs-6 mdui-col-sm-3" >
